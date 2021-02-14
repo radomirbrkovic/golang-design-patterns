@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    container_name: "go-dp"
+    image: golang:1.6.1-alpine
+    environment:
+      - PATH=$PATH:/usr/local/go/bin
+    volumes:
+       - .:/go/src
+    working_dir: /go/src
+    tty: true 
+    command: tail -f /dev/null
